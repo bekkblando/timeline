@@ -77,13 +77,13 @@ class Timeline extends Component {
     let locations = this.state.locations;
     let vocabulary = this.state.vocabulary;
     return (
-      <div class = "container">
+      <div className = "container">
         <form onSubmit={this.buildJSON}>
 
-      <div class = "row">
-        <div class = "col s6">
+      <div className = "row">
+        <div className = "col s6">
             <h1>Name:</h1>
-            <input class="input-field" type="text" onChange = {(event) => this.setState({name: event.target.value})}/>
+            <input className = "input-field" type="text" onChange = {(event) => this.setState({name: event.target.value})}/>
             <h1>Location</h1>
             <button onClick={ this.addLocation }>Add Location</button>
           {
@@ -105,7 +105,7 @@ class Timeline extends Component {
         </div>
       </div>
 
-        <div class="col s6">
+        <div className="col s6">
           <h1>Vocabulary:</h1>
           {
             vocabulary.map((val, idx) => {
@@ -113,11 +113,11 @@ class Timeline extends Component {
                 <div>
                   <label>
                     Word
-                    <input class="input-field" type="text" onChange = {(event) => this.setWord(event, idx)}/>
+                    <input className="input-field" type="text" onChange = {(event) => this.setWord(event, idx)}/>
                   </label>
                   <label>
                     Meaning
-                    <input class="input-field" type="text" onChange = {(event) => this.setMeaning(event, idx)}/>
+                    <input className="input-field" type="text" onChange = {(event) => this.setMeaning(event, idx)}/>
                   </label>
                 </div>
               );
@@ -128,15 +128,15 @@ class Timeline extends Component {
 
           <label>
             <h1>Start Date:</h1>
-            <input type="datetime" class="input-field" onChange = {(event) => this.setState({startdate: event.target.value })}/>
+            <input type="datetime" className="input-field" onChange = {(event) => this.setState({startdate: event.target.value })}/>
           </label>
           <label>
             <h1>End Date:</h1>
-            <input type="endtime" class="input-field"  onChange = {(event) => this.setState({enddate: event.target.value })}/>
+            <input type="endtime" className="input-field"  onChange = {(event) => this.setState({enddate: event.target.value })}/>
           </label>
           <label>
             <h1>Notes:</h1>
-            <input class="input-field" type="text" onChange = {(event) => this.setState({notes: event.target.value })}/>
+            <input className="input-field" type="text" onChange = {(event) => this.setState({notes: event.target.value })}/>
           </label>
           <input type="submit" value="Submit" />
         </form>
